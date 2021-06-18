@@ -32,5 +32,9 @@ namespace Dany201810030004.DataBase
         {
             return ConexionAsync.Table<Ubicacion>().ToListAsync();
         }
+        public Task<int> GetCount()
+        {
+            return ConexionAsync.Table<Ubicacion>().CountAsync();
+        }
     }
 }

@@ -43,12 +43,19 @@ namespace Dany201810030004
                     string dbName = "dbexamen.sqlite";
                     string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
                     string finalPathDb = Path.Combine( folderPath,dbName);
-
+                    // Determine whether the directory exists.
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+                    
                     InstanceDataBase = new ManagerDataBase(finalPathDb);
                 }
                 return InstanceDataBase;
             }
 
         }
+
+
     }
 }
