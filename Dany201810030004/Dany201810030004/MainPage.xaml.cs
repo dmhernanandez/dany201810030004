@@ -26,7 +26,7 @@ namespace Dany201810030004
             }
             else
             {
-                bool confirmacion = await DisplayAlert("¿Desea cancelar la ubicación actual?", "Se borraran los datos actuales", "Cancelar","Aceptar");
+                bool confirmacion = await DisplayAlert("¿Desea cancelar la ubicación actual?", "Se borraran los datos actuales", "Aceptar", "Cancelar");
                 if (confirmacion)
                     Limpiar();  
             }
@@ -34,7 +34,8 @@ namespace Dany201810030004
 
         private async void BtnVerLista_Clicked(object sender, EventArgs e)
         {
-            ValidarSalida();
+            //  ValidarSalida();
+            await Navigation.PushAsync(new ListaUbicaciones());
         }
 
         private void BtnLocationActual_Clicked(object sender, EventArgs e)
@@ -44,28 +45,7 @@ namespace Dany201810030004
 
         private async void BtnCapturar_Clicked(object sender, EventArgs e)
         {
-            var ubicacionActual = CrossGeolocator.Current;
-            /*Obtiene nuestra ubicación actual si tenemos disponible la Geolocalizacion es decir el permiso o sino lo pedimos*/
-            if (ubicacionActual.IsGeolocationAvailable)
-            {
-
-                if (!ubicacionActual.IsGeolocationEnabled)
-                {
-                    DisplayAlert("Ubicación", "Debe encender la  ubicacion o GPS de su dispositivo", "Aceptar");
-
-                }
-                else
-                {
-                    var position = await ubicacionActual.GetPositionAsync();
-                    TxtLatitud.Text = position.Latitude.ToString();
-                    TxtLongitud.Text = position.Longitude.ToString();
-
-                }
-            }
-            else
-            {
-                DisplayAlert("Permiso denegado", "Para poder acceder a la localización debe pertir acceder a la ubicacion", "Aceptar");
-            }
+            ObtenerPosition();
         }
 
         private void BtnGuardar_Clicked(object sender, EventArgs e)
@@ -91,7 +71,14 @@ namespace Dany201810030004
     
         private void TbiLista_Clicked(object sender, EventArgs e)
         {
-            ValidarSalida();
+            // ValidarSalida();
+        Navigation.PushAsync(new ListaUbicaciones());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ObtenerPosition();
         }
 
         //Limpiamos los valores
@@ -112,9 +99,34 @@ namespace Dany201810030004
             }
             else
             {
-                bool confirmacion = await DisplayAlert("¿Desea guardar los datos?", "Si sale se borraran los datos actuales", "Cancelar", "Aceptar");
+                bool confirmacion = await DisplayAlert("¿Desea guardar los datos?", "Si sale se borraran los datos actuales", "Aceptar", "Cancelar");
                 if (confirmacion)
                     await Navigation.PushAsync(new ListaUbicaciones());
+            }
+        }
+       private async void ObtenerPosition()
+        {
+            var ubicacionActual = CrossGeolocator.Current;
+            /*Obtiene nuestra ubicación actual si tenemos disponible la Geolocalizacion es decir el permiso o sino lo pedimos*/
+            if (ubicacionActual.IsGeolocationAvailable)
+            {
+
+                if (!ubicacionActual.IsGeolocationEnabled)
+                {
+                    DisplayAlert("Ubicación", "Debe encender la  ubicacion o GPS de su dispositivo", "Aceptar");
+
+                }
+                else
+                {
+                    var position = await ubicacionActual.GetPositionAsync();
+                    TxtLatitud.Text = position.Latitude.ToString();
+                    TxtLongitud.Text = position.Longitude.ToString();
+
+                }
+            }
+            else
+            {
+                DisplayAlert("Permiso denegado", "Para poder acceder a la localización debe pertir acceder a la ubicacion", "Aceptar");
             }
         }
     }

@@ -1,25 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Dany201810030004.ListaUbicaciones">
+             x:Class="Dany201810030004.ListaUbicaciones"
+             Title="Ubicaciones">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Nueva ubicación"
+            x:Name="tbiNuevaUbicacion"
+            Clicked="tbiNuevaUbicacion_Clicked"
+          />
 
+    </ContentPage.ToolbarItems>
     <StackLayout>
-        <Label Text="{Binding Nombre}"/>
         <ListView x:Name="UbicacionesLista" SelectionMode="Single"
-                  ItemsSource="{Binding Ubicacion}">
+                  ItemsSource="{Binding Ubicacion}"
+                  ItemTapped="UbicacionesLista_ItemTapped"
+                    IsPullToRefreshEnabled = "true" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="15,0" Orientation="Vertical">
 
-                            <Label Text="{Binding IdUbicacion}" FontSize="15" FontAttributes="Bold" TextColor="DarkSlateBlue"/>
+                            <Label Text="{Binding DescripcionCorta}" FontSize="15" FontAttributes="Bold" TextColor="DarkSlateBlue"/>
                             <Label Text="{Binding DescripcionLarga}" FontSize="10"/>
                         </StackLayout>
 
                         <ViewCell.ContextActions>
-                            <MenuItem x:Name="OnUpdate"
-                                          Text="Actualizar"
-                                          CommandParameter="{Binding .}"/>
                             <MenuItem x:Name="OnDelete"
                                           Text="Eliminar"
                                           Clicked="OnDelete_Clicked"
@@ -30,5 +36,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackLayout>
+            <Label Text="**Para eliminar mantenga presionada la ubicación." TextColor="OrangeRed" FontSize="18"/>
+            <Label Text="**Clic sobre la ubicación para ver le mapa." TextColor="Red" FontSize="18"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

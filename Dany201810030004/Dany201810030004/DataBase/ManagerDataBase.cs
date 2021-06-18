@@ -23,7 +23,10 @@ namespace Dany201810030004.DataBase
         {
             return ConexionAsync.InsertAsync(ubicacion);
         }
-
+        public Task<int> DeleteUbication(Ubicacion ubicacion)
+        {
+            return  ConexionAsync.DeleteAsync(ubicacion);
+        }
         /*Retorna todos las ubicaciones*/
         public Task<List<Ubicacion>> GetAllUbications()
         {

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dany201810030004.MapPage"
+                xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             Title="Mapa">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Nueva ubicación"
+            x:Name="tbiNuevaUbicacion"
+            Clicked="tbiNuevaUbicacion_Clicked"
+          />
+
+    </ContentPage.ToolbarItems>
+    <maps:Map x:Name="mapa"
+                      MapType="Street" 
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand" 
+                      IsShowingUser="True">
+        <!--maps:Map.ItemTemplate>
+            <DataTemplate>
+                <maps:Pin    Type="Place"
+                            Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+            </DataTemplate>
+        </maps:Map.ItemTemplate-->
+    </maps:Map>
+</ContentPage>
