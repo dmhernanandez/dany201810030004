@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dany201810030004.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Nueva ubicación"
+            x:Name="tbiNuevaUbicacion"
+            Clicked="tbiNuevaUbicacion_Clicked"
+            />
+        <ToolbarItem
+            Text="Mis ubicaciones"
+            x:Name="TbiLista"
+            Clicked="TbiLista_Clicked"
+            />
+
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Image Source="logo_uth.png"/>
+
+            <Label Text="Guarda tu ubicación actual" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="Latitud" FontSize="14"/>
+            <Entry x:Name="TxtLatitud" Placeholder="Latitud actual"/>
+            <Label Text="Logitud" FontSize="14"/>
+            <Entry x:Name="TxtLongitud" Placeholder="Longitud actual"/>
+            <Label Text="Ingrese una descripción de la ubicación"/>
+            <Editor  x:Name="TxtDescripcionUbicacion"  AutoSize="TextChanges"/>
+            <Label Text="Descripción corta" FontSize="14"/>
+            <Entry x:Name="TxtDescripcionCorta" Placeholder="Escriba una descripción breve"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked" Text="Guardar ubicación"/>
+                <Button x:Name="BtnVerLista" Clicked="BtnVerLista_Clicked" Text="Ver mis ubicaciones"/>
+            </StackLayout>
+            <Button x:Name="BtnCapturar" Clicked="BtnCapturar_Clicked" Text="Capturar mi ubicación"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

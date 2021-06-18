@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dany201810030004.ListaUbicaciones">
+
+    <StackLayout>
+        <Label Text="{Binding Nombre}"/>
+        <ListView x:Name="UbicacionesLista" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,0" BackgroundColor="Red">
+
+                        </StackLayout>
+
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="OnDelete"
+                                          Text="Eliminar"
+                                          CommandParameter="{Binding .}"/>
+                            <MenuItem x:Name="OnUpdate" 
+                                          CommandParameter="{Binding .}"
+                                          IsDestructive="true"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

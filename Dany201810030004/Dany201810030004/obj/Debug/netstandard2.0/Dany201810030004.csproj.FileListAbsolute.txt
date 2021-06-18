@@ -1,0 +1,14 @@
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\bin\Debug\netstandard2.0\Dany201810030004.deps.json
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\bin\Debug\netstandard2.0\Dany201810030004.dll
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\bin\Debug\netstandard2.0\ref\Dany201810030004.dll
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\bin\Debug\netstandard2.0\Dany201810030004.pdb
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.csproj.AssemblyReference.cache
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.AssemblyInfoInputs.cache
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.AssemblyInfo.cs
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.csproj.CoreCompileInputs.cache
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.dll
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\ref\Dany201810030004.dll
+C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.pdb
