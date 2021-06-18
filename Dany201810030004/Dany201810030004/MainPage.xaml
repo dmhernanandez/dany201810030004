@@ -22,13 +22,14 @@
 
             <Label Text="Guarda tu ubicación actual" FontSize="Title" Padding="30,10,30,10"/>
             <Label Text="Latitud" FontSize="14"/>
-            <Entry x:Name="TxtLatitud" Placeholder="Latitud actual"/>
+            <Entry x:Name="TxtLatitud" Placeholder="Latitud actual" Keyboard="Numeric"/>
             <Label Text="Logitud" FontSize="14"/>
-            <Entry x:Name="TxtLongitud" Placeholder="Longitud actual"/>
-            <Label Text="Ingrese una descripción de la ubicación"/>
-            <Editor  x:Name="TxtDescripcionUbicacion"  AutoSize="TextChanges"/>
+            <Entry x:Name="TxtLongitud" Placeholder="Longitud actual"
+                   Keyboard="Numeric"/>
             <Label Text="Descripción corta" FontSize="14"/>
             <Entry x:Name="TxtDescripcionCorta" Placeholder="Escriba una descripción breve"/>
+            <Label Text="Ingrese una descripción de la ubicación"/>
+            <Editor  x:Name="TxtDescripcionUbicacion"  AutoSize="TextChanges"/>
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked" Text="Guardar ubicación"/>
                 <Button x:Name="BtnVerLista" Clicked="BtnVerLista_Clicked" Text="Ver mis ubicaciones"/>

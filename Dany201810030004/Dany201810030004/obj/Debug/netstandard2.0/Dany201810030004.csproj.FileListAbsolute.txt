@@ -12,3 +12,4 @@ C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany20181
 C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.dll
 C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\ref\Dany201810030004.dll
 C:\Users\Dani Hernandez\source\repos\Dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\Dany201810030004.pdb
+C:\Users\Dani Hernandez\source\repos\dany201810030004\Dany201810030004\Dany201810030004\obj\Debug\netstandard2.0\ListaUbicaciones.xaml.g.cs

@@ -46,4 +46,9 @@ namespace Dany201810030004
 
                     InstanceDataBase = new ManagerDataBase(finalPathDb);
                 }
-                return Insta
+                return InstanceDataBase;
+            }
+
+        }
+    }
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dany201810030004.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,13 @@ namespace Dany201810030004
         {
             base.OnAppearing();
             UbicacionesLista.ItemsSource = await App.GetInstanceDB.GetAllUbications();
+        }
+
+        private void OnDelete_Clicked(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var mas = mi.CommandParameter as Ubicacion;
+            DisplayAlert("Selecciona", mas.IdUbicacion + " + " + mas.DescripcionCorta, "OK");
         }
     }
 }

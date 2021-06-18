@@ -5,19 +5,24 @@
 
     <StackLayout>
         <Label Text="{Binding Nombre}"/>
-        <ListView x:Name="UbicacionesLista" SelectionMode="Single">
+        <ListView x:Name="UbicacionesLista" SelectionMode="Single"
+                  ItemsSource="{Binding Ubicacion}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,0" BackgroundColor="Red">
+                        <StackLayout Padding="15,0" Orientation="Vertical">
 
+                            <Label Text="{Binding IdUbicacion}" FontSize="15" FontAttributes="Bold" TextColor="DarkSlateBlue"/>
+                            <Label Text="{Binding DescripcionLarga}" FontSize="10"/>
                         </StackLayout>
 
                         <ViewCell.ContextActions>
+                            <MenuItem x:Name="OnUpdate"
+                                          Text="Actualizar"
+                                          CommandParameter="{Binding .}"/>
                             <MenuItem x:Name="OnDelete"
                                           Text="Eliminar"
-                                          CommandParameter="{Binding .}"/>
-                            <MenuItem x:Name="OnUpdate" 
+                                          Clicked="OnDelete_Clicked"
                                           CommandParameter="{Binding .}"
                                           IsDestructive="true"/>
                         </ViewCell.ContextActions>
